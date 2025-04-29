@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Caliste.css">
+    <link rel="stylesheet" href="assets/css/Copeland.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
+    <link rel="stylesheet" href="pizza.css">
+    <title>Build Your Own</title>
+
+</head>
+
+<body style="background: url(&quot;assets/img/joshua-bartell-6vvIBTvL90A-unsplash.jpg&quot;), rgb(33,37,41);">
+    <nav class="navbar navbar-expand-md bg-dark py-3" data-aos="zoom-in-up" data-aos-duration="800" data-bs-theme="dark" style="height: 100px;background: linear-gradient(black, rgb(255,193,7) 0%), rgb(205,86,0);margin: 0px;padding: 15px 0px;color: rgb(0,128,255);border-top-style: none;border-right-style: none;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span data-aos="zoom-in-up" data-aos-duration="800" style="font-family: Caliste;font-size: 60PX;"><strong><em><span style="color: rgb(248, 241, 231);">Naanza's</span></em></strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" href="index.html" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30px;"><span style="color: rgb(248, 241, 231);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" href="menu.html" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30PX;"><span style="color: rgb(248, 241, 231);">Menu</span></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30PX;" href="About me.html"><span style="color: rgb(248, 241, 231);">About us</span></a></li>
+                </ul><a href="byo.html"><a class="btn btn-primary ms-md-2" role="button" data-aos="zoom-in-up" data-aos-duration="800" href="byo.html" style="color: rgb(0,0,0);background: rgb(255,255,255);font-family: Caliste;font-size: 30px;border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">Build your own</a></a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+
+    <img src="Plain Cheese Pizza - Base (Level 1).png" class="overlay-whitey">
+    <img src="pizza-2589577.jpg" class="overlay-bg">
+
+    <script src="pizza.js"></script>
+    <script src="cart.js"></script>
+
+
+    <div class="pizza-builder">
+        <div class="pizza-stage">
+            <img src="Plain Cheese Pizza - Base (Level 1).png" class="base" id="pizza">
+            <img src="bell peper overlay (1).png" class="topping" id="topping-bell">
+            <img src="Cilantro Layer Overlay.png" class="topping" id="topping-cilantro">
+            <img src="Caramelized Onions Layer Overlay.png" class="topping" id="topping-onions">
+            <img src="Green Chutney Sauce Layer Overlay.png" class="topping" id="topping-chutney">
+            <img src="Gobi Layer Overlay.png" class="topping" id="topping-gobi">
+            <img src="Jalapeno Layer Overlay.png" class="topping" id="topping-jalapeno">
+            <img src="okra layer for naanza.png" class="topping" id="topping-okra">
+            <img src="seasoned panner layer.png" class="topping" id="topping-paneer">
+        </div>        
+            <div class="btn-holder">
+                <div class="sizebox">
+                    <div class="collumn1">
+                        <button class="layer" id="btn-topping1" data-topping="bell">
+                            <img src="bell peper overlay (1).png" class="topping-mini">
+                            Bell Pepper
+                        </button>
+                        
+                        <button class="layer" id="btn-topping2" data-topping="cilantro">
+                            <img src="Cilantro Layer Overlay.png" class="topping-mini">
+                            Cilantro
+                        </button>
+                        
+                        <button class="layer" id="btn-topping3" data-topping="onions">
+                            <img src="Caramelized Onions Layer Overlay.png" class="topping-mini">
+                            Onions
+                        </button>
+                        
+                        <button class="layer" id="btn-topping4" data-topping="chutney">
+                            <img src="Green Chutney Sauce Layer Overlay.png" class="topping-mini">
+                            Green Chutney
+                        </button>
+                    </div>
+                    
+                    <div class="collumn2">
+                        <button class="layer" id="btn-topping5" data-topping="gobi">
+                            <img src="Gobi Layer Overlay.png" class="topping-mini">
+                            Gobi Manchurian
+                        </button>
+                        
+                        <button class="layer" id="btn-topping6" data-topping="jalapeno">
+                            <img src="Jalapeno Layer Overlay.png" class="topping-mini">
+                            Jalapeno
+                        </button>
+                        
+                        <button class="layer" id="btn-topping7" data-topping="okra">
+                            <img src="okra layer for naanza.png" class="topping-mini">
+                            Okra
+                        </button>
+                                        
+                        <button class="layer" id="btn-topping8" data-topping="paneer">
+                            <img src="seasoned panner layer.png" class="topping-mini">
+                            Paneer Masala
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="cartBtns">
+                <button id="viewCartBtn">View Cart</button>
+                <button class="addtocart" onclick="addToCartCustom('Custom Pizza', 19.99, selectedToppings)">Add to Cart</button>
+            </div>
+    </div>
+    
+    <div class="cartBox" id="cartBox">
+        <h2>Cart</h2>
+        <ul id="cart"></ul>
+        <button class="checkout-btn" onclick="animateButton(this)">Checkout</button>
+
+        <script>
+            function animateButton(btn) {
+                btn.classList.add("clicked");
+                btn.innerHTML = "";
+
+                setTimeout(() => {
+                btn.classList.remove("clicked");
+                btn.innerHTML = "Checkout";
+            }, 1500);
+            }
+        </script>
+        <button class="clearCartBtn">Clear Cart</button>
+    </div>
+    <script>
+        document.getElementById("viewCartBtn").addEventListener("click", function () {
+            document.getElementById("cartBox").classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

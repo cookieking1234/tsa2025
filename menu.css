@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(wood-1759566_1280.jpg);
+  color: #fff;
+  min-height: 100vh;
+}
+
+.saharsh {
+  display: flex;
+}
+
+.left-image {
+  flex: 1;
+  position: relative;
+  background-image: url('Plain Cheese Pizza - Base (Level 1) (1).png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* ✅ */
+  min-height: 500px; /* ✅ Ensures it looks good even when screen resizes */
+}
+
+.right-menu {
+  flex: 1.5;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.NAANZA {
+  color: white;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  color: #f2f2f2;
+  border-bottom: 2px solid #333;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.menu-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  border: 2px solid transparent;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  border: 2px solid #f0c674;
+  background-color: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+
+.menu-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.menu-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f0c674;
+}
+
+.menu-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f0c674;
+}
+
+.menu-item img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.menu-details {
+  flex-grow: 1;
+}
+
+.menu-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f0c674;
+  margin-bottom: 0.5rem;
+}
+
+.menu-desc {
+  margin-top: 0.5rem;
+  color: #ccc;
+  font-size: 1rem;
+}  
+
+.hover-preview {
+position: absolute;
+inset: 0;
+background-size: cover; /* ✅ */
+min-height: 500px; /* ✅ Ensures it looks good even when screen resizes */
+background-position: center;
+opacity: 0;
+transition: opacity 0.3s ease; /* keep this */
+z-index: 10;
+pointer-events: none;
+}
+
+.menu-item.selected {
+border: 2px solid #f0c674;
+background-color: #222;
+box-shadow: 0 0 10px #f0c674;
+}
+
+.nav-buttons {
+display: flex;
+justify-content: center;
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.nav-buttons button {
+background-color: #f0c674;
+color: #0e0e0e;
+font-size: 1rem;
+font-weight: bold;
+padding: 0.75rem 2rem;
+border: none;
+border-radius: 12px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.nav-buttons button:hover {
+background-color: #d6af4e;
+transform: scale(1.05);
+}
+.nav-buttons {
+display: flex;
+justify-content: center;
+gap: 2rem;
+margin-top: 2rem; /* slightly higher */
+margin-bottom: 2rem;
+}
+
+.nav-btn {
+background-color: #f0c674;
+color: #0e0e0e;
+font-size: 1rem;
+font-weight: bold;
+padding: 0.75rem 2rem;
+border: none;
+border-radius: 12px;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.nav-btn:hover {
+background-color: #d6af4e;
+transform: scale(1.05);
+}
+
+.nav-btn:focus {
+outline: 2px solid #fff;
+outline-offset: 3px;
+}
+
+/* Slide animation */
+body.slide-out {
+animation: slideOut 0.4s forwards ease-in;
+}
+
+@keyframes slideOut {
+from {
+  opacity: 1;
+  transform: translateX(0);
+}
+to {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+}
+
+.nav-btn.active-nav {
+background-color: #555;
+color: #aaa;
+cursor: not-allowed;
+box-shadow: none;
+transform: none;
+}
+
+.nav-btn[disabled] {
+background-color: #555;
+color: #aaa;
+cursor: not-allowed;
+box-shadow: none;
+transform: none;
+pointer-events: none;
+}
+
+
+
+
+.btn-holder button {
+  color: white;
+}
+
+.addtocart {
+  width: 220px;
+  height: 50px;
+  border-radius: 0 10px 10px 0;
+  background-color: #ddb15a;
+}
+.clearCartBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #939393a0;
+  border-color: transparent;
+  color: rgb(0, 0, 0);
+  margin: 20px;
+  transition: all 0.3s;
+}
+
+.clearCartBtn:active {
+  background-color: #00000027;
+}
+
+.cartBox {
+  position: absolute;
+  width: 900px;
+  height: 80%;
+  background-color:rgba(141, 103, 49);
+  z-index: 100;
+  overflow-x: hidden;
+
+  border-radius: 5%;
+  padding: 50px;
+  transition: all 0.5s;
+
+  top: 17%;
+  left: -100%;
+  transition: left 1s ease-in-out;
+
+}
+
+.cartBox .cart-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.cartBox.active {
+  left: 30px;
+}
+.checkout-btn, .clearCartBtn {
+  background-color: #f0c674;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 10px 5px 0 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative; /* 🛠️ add this line */
+  overflow: hidden; /* 🛠️ add this line too */
+}
+
+.cartBox {
+  right: -450px; /* instead of left */
+}
+.cartBox.active {
+  right: 30px;
+}
+
+.cartBox .cart-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.checkout-btn::after {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+  transition: all 0.5s;
+  color: white;
+}
+
+.checkout-btn.clicked {
+  background-color: #f0c674;
+  width: 118.5px;
+  height: 52px;
+}
+
+.checkout-btn.clicked::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cartBox {
+  position: fixed;
+  top: 10%;
+  right: 30px;
+  width: 400px;
+  height: auto;
+  max-height: 75%;
+  background-color: #2d2d2d;
+  color: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.5s ease;
+}
+
+.cartBox.active {
+  right: 30px;
+  opacity: 1;
+}
+
+.cartBox h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #f0c674;
+}
+
+.cartBox ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cartBox ul li {
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  font-size: 16px;
+}
+
+.cartBox ul li:last-child {
+  border-bottom: none;
+}
+
+.cartBtns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.view-cart-btn, .add-selected-btn {
+  flex: 0.1 0.1 30%;
+  background-color: #f1bb4d;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  text-align: center;
+}
+
+.view-cart-btn:hover, .add-selected-btn:hover {
+  background-color: #af790c;
+  transform: scale(1.02);
+}
+
+
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+.menu-item {
+  background-color: rgba(71, 68, 68, 0.6); /* dark background with transparency */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease;
+}
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.menu-title,
+.menu-price {
+  color: #fbdc89; /* Brighter golden-yellow */
+}
+
+.menu-desc {
+  color: #eee;
+}

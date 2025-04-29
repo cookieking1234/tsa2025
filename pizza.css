@@ -1,0 +1,336 @@
+
+.pizza-builder {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-holder {
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    width: 525px; /* wider */
+    height: 600px; /* taller */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    justify-content: space-around;
+    
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.sizebox {
+    width: 300px;
+    margin-bottom: 30px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.collumn2 {
+    margin-left: 30px;
+}
+
+.collumn1 {
+    margin-left: -15px;
+}
+
+.collumn1 button {
+    margin-bottom: 40px;
+}
+
+.collumn2 button {
+    margin-bottom: 40px;
+}
+
+.pizza-stage {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    width: 800px; /* was 500px */
+    aspect-ratio: 1 / 1;
+    z-index: 10;
+}
+
+.pizza-stage img.base {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.topping {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+.layer.active .topping {
+    opacity: 1;
+}
+.layer {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    background-color: rgba(255,255,255,0.05);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.layer:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: #f0c674;
+}
+
+.layer.active {
+    background-color: rgba(255,255,255,0.2);
+    border: 2px solid #f0c674;
+}
+
+.addtocart, #viewCartBtn {
+    font-weight: bold;
+    background-color: #f0c674;
+    border: none;
+    color: #333;
+    margin-top: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.addtocart:hover, #viewCartBtn:hover {
+    background-color: #d6af4e;
+}
+
+.btn-holder .layer .topping-mini {
+    height: inherit;
+    margin-top: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.layer:hover {
+    border-radius: 100%;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-width: 10px;
+}
+
+.layer.active .topping{
+    opacity: 1;
+    z-index: -2;
+}
+
+.layer.active {
+    opacity: 1;
+    background-color: gray;
+    border-radius: 100%;
+    border-width: 10px;
+    border-color: black;
+}
+
+.overlay-whitey {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 960px;
+    height: 720px;
+}
+
+.overlay-bg {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -5;
+    width: 960px;
+    box-shadow: 10px 30px 40px rgba(0,0,0,.8);
+}
+
+.overlay-wood {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -5;
+    width: 960px;
+}
+
+body {
+    overflow: hidden;
+}
+
+.base {
+    z-index: -3;
+    width: 800px;
+}
+
+.btn-holder button {
+    color: white;
+}
+
+.addtocart {
+    width: 220px;
+    height: 50px;
+    border-radius: 0 10px 10px 0;
+}
+
+#viewCartBtn {
+    width: 220px;
+    height: 50px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cartBtns {
+    position: fixed;
+    bottom: 40px;
+    right: 80px;
+    display: flex;
+    gap: 20px;
+    z-index: 100;
+}
+.clearCartBtn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #939393a0;
+    border-color: transparent;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+    transition: all 0.3s;
+}
+
+.clearCartBtn:active {
+    background-color: #00000027;
+}
+
+.cartBox {
+    position: absolute;
+    width: 400px;
+    height: 80%;
+    background-color: #2d2d2d;
+    color: white;
+    z-index: 1000;
+    top: 130px;
+    left: -100%;
+    transition: left 0.5s ease-in-out;
+    padding: 40px 30px;
+    border-radius: 20px;
+}
+
+.cartBox.active {
+    left: 30px;
+}
+
+.cartBox.active {
+    display: block;
+}
+
+.cartBox h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f0c674;
+}
+
+.cartBox ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartBox ul li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    font-size: 16px;
+}
+
+.cartBox ul li:last-child {
+    border-bottom: none;
+}
+
+.cartBtns {
+    margin-bottom: 10px;
+}
+
+.checkout-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #939393a0;
+    border-color: transparent;
+    color: rgb(0, 0, 0);
+    margin: 20px;
+
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.checkout-btn::after {
+    content: "✔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+    transition: all 0.5s;
+    color: white;
+}
+
+.checkout-btn.clicked {
+    background-color: #32cd32;
+    width: 118.5px;
+    height: 52px;
+}
+
+.checkout-btn.clicked::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+@media (max-width: 768px) {
+    .pizza-builder {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pizza-stage {
+        width: 300px;
+        height: 300px;
+    }
+
+    .btn-holder {
+        width: 120%;
+    }
+}
+.layer {
+    width: 130px;
+    height: 130px;
+    font-size: 14px;
+}

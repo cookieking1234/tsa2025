@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en" style="color: var(--bs-secondary);">
+
+<head>
+    <link rel="stylesheet" href="menu.css">
+    <script src="menu.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Menu</title>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const currentPage = location.pathname.split('/').pop(); // Get the current page (like 'menu.html')
+          const naanzaBtn = document.getElementById('naanzaBtn');
+          const drinksBtn = document.getElementById('drinksBtn');
+          const dessertsBtn = document.getElementById('dessertsBtn');
+    
+          // Disable the button corresponding to the current page
+          if (currentPage === 'menu.html') {
+            naanzaBtn.classList.add('active-nav');
+            naanzaBtn.setAttribute('disabled', 'true');
+          } else if (currentPage === 'drinks.html') {
+            drinksBtn.classList.add('active-nav');
+            drinksBtn.setAttribute('disabled', 'true');
+          } else if (currentPage === 'desserts.html') {
+            dessertsBtn.classList.add('active-nav');
+            dessertsBtn.setAttribute('disabled', 'true');
+          }
+        });
+    
+        function goToPage(url) {
+          document.body.classList.add('slide-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 400); // Matches the animation duration
+        }
+      </script>
+    
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Caliste.css">
+    <link rel="stylesheet" href="assets/css/Copeland.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
+    <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
+    <link rel="stylesheet" href="assets/css/Infinite-Scroller.css">
+</head>
+
+<body style="color: var(--bs-secondary);background: url(&quot;assets/img/joshua-bartell-6vvIBTvL90A-unsplash.jpg&quot;), rgba(89,97,105,0);">
+    <nav class="navbar navbar-expand-md bg-dark py-3" data-aos="zoom-in-up" data-aos-duration="800" data-bs-theme="dark" style="height: 100px;background: linear-gradient(black, rgb(255,193,7) 0%), rgb(205,86,0);margin: 0px;border-radius: 0px;color: rgb(0,128,255);border-color: rgb(0,122,244);padding: 15px 0px;">
+        <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span data-aos="zoom-in-up" data-aos-duration="800" style="font-family: Caliste;font-size: 60PX;"><strong><em><span style="color: rgb(248, 241, 231);">Naanza's</span></em></strong></span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-5"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-5">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#"></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" href="index.html" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30px;"><span style="color: rgb(248, 241, 231);">Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" href="menu.html" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30PX;"><span style="color: rgb(248, 241, 231);">Menu</span></a></li>
+                    <li class="nav-item"><a class="nav-link" data-aos="zoom-in-up" data-aos-duration="800" style="font-family: Caliste;color: rgb(255,255,255);font-size: 30PX;" href="About me.html"><span style="color: rgb(248, 241, 231);">About us</span></a></li>
+                </ul><a href="byo.html"><a class="btn btn-primary ms-md-2" role="button" data-aos="zoom-in-up" data-aos-duration="800" href="byo.html" style="color: rgb(0,0,0);background: rgb(255,255,255);font-family: Caliste;font-size: 30px;border-style: none;border-top-style: none;border-right-style: none;border-bottom-style: none;border-left-style: none;">Build your own</a></a>
+            </div>
+        </div>
+    </nav>
+    <div class="pause-on-hover infinite-scroller">
+        <div class="scrollable">
+            <div style="background: rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;background: rgba(255,255,255,0);border-color: rgb(0,128,255);color: rgb(19,127,235);">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;border-color: var(--bs-info);">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg></div>
+            <div style="background: rgb(0,0,0);"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;background: rgba(255,255,255,0);border-color: rgb(0,128,255);color: rgb(19,127,235);">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;border-color: var(--bs-info);">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-pizza text-warning" data-aos="zoom-in-down" data-aos-duration="800" style="font-size: 48px;">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983z"></path>
+                    <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"></path>
+                    <path d="M13 11.01v-.01"></path>
+                    <path d="M11 14v-.01"></path>
+                </svg></div>
+        </div>
+    </div>
+    <div class="container py-4 py-xl-5" style="background: rgba(89,97,105,0);color: rgb(255,255,255);border-radius: 50px;opacity: 1;">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 data-aos="zoom-in-down" data-aos-duration="800" style="color: rgb(255,255,255);font-family: Caliste;font-size: 50px;">Explore the Menu</h2>
+                <p data-aos="zoom-in-down" data-aos-duration="800" class="w-lg-50" style="color: rgb(255,255,255);font-family: Copeland;font-size: 25px;">Learn about our special offers here!</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col" data-aos="zoom-in-down" data-aos-duration="400">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" alt="a pizza with cheese and toppings" data-aos="zoom-in-down" data-aos-duration="800" style="height: 200px;" src="assets/img/photo-1665033628673-7de125eb6b12.jpg">
+                    <div class="card-body p-4" data-aos="zoom-in-down" data-aos-duration="800">
+                        <h4 class="card-title" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Caliste;">aBOUT OUR NAANZA'S</h4>
+                        <p class="card-text" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Copeland;"><em>Our bold fusion pies are built on oven-baked naan and loaded with Indian spice, Italian flair, and 100% vegetarian toppings.</em></p><button class="btn btn-primary" data-aos="zoom-in-down" data-aos-duration="800" type="button" style="background: rgb(0,0,0);font-family: Caliste;border-color: rgba(255,255,255,0);border-right-color: rgba(13,110,253,0);border-bottom-color: rgba(13,110,253,0);border-left-color: rgba(13,110,253,0);">Peep the specials</button>
+                        <div class="d-flex">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col" data-aos="fade" data-aos-duration="400">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" alt="vegetable salad in brown ceramic bowl" data-aos="zoom-in-down" data-aos-duration="800" style="height: 200px;" src="assets/img/photo-1611171711925-92171c63fc4b.jpg">
+                    <div class="card-body p-4" data-aos="zoom-in-down" data-aos-duration="800" style="height: 210.797px;">
+                        <h4 class="card-title" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Caliste;font-size: 20PX;">lEARN ABOUT OUR SIDES</h4>
+                        <p class="card-text" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Copeland;"><em>Fresh, crispy, and full of flavor. These sides bring the crunch, spice, and balance to your Naanza.</em></p><button class="btn btn-primary" data-aos="zoom-in-down" data-aos-duration="800" type="button" style="background: rgb(0,0,0);font-family: Caliste;border-top-color: rgba(13,110,253,0);border-right-color: rgba(13,110,253,0);border-bottom-color: rgba(13,110,253,0);border-left-color: rgba(13,110,253,0);">Explore</button>
+                        <div class="d-flex">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div class="col" data-aos="zoom-in-down" data-aos-duration="800">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" alt="cake on plate" data-aos="zoom-in-down" data-aos-duration="800" style="height: 200px;" src="assets/img/photo-1560969617-715be4e54d97.jpg">
+                    <div class="card-body p-4" data-aos="zoom-in-down" data-aos-duration="800" style="height: 210.797px;">
+                        <h4 class="card-title" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Caliste;font-size: 20px;"> learn ABOUT OUR TREATS</h4>
+                        <p class="card-text" data-aos="zoom-in-down" data-aos-duration="800" style="font-family: Copeland;"><em>Sweet, refreshing, and fusion-forward. Sip, scoop, and savor something different.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</em></p><button class="btn btn-primary" data-aos="zoom-in-down" data-aos-duration="800" type="button" style="background: rgb(0,0,0);font-family: Caliste;border-color: rgba(255,255,255,0);border-top-color: rgba(255, 255, 255, 0);border-right-color: rgba(13,110,253,0);border-bottom-color: rgba(13,110,253,0);border-left-color: rgba(13,110,253,0);">Explore</button>
+                        <div class="d-flex">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+    <div class="saharsh">
+    
+        <div class="left-image"></div>
+        <div class="right-menu">
+          <h1 class="NAANZA"><span data-aos="zoom-in-up" data-aos-duration="800" style="font-family: 'Caliste', 'Poppins', sans-serif; font-size: 50px; color: rgb(255, 255, 255); letter-spacing: 2px; text-transform: uppercase;">
+            OUR NAANZA'S
+          </span>
+          </h1>
+          <style>
+            .menu-container {
+              display: grid;
+              gap: 20px;
+            }
+            
+            .menu-item {
+              display: grid;
+              grid-template-columns: 4fr 1fr;
+              align-items: center;
+              border: 1px solid #ccc;
+              padding: 10px;
+            }
+            
+            .menu-title {
+              font-size: 18px;
+              font-weight: bold;
+            }
+          
+            .addtocartONe {
+              padding: 8px 10px;
+              background-color: #28a745;
+              color: white;
+              border: none;
+              cursor: pointer;
+              height: 95%;
+              margin: 0 10px;
+            }
+          </style>
+          
+          <div class="menu-container">
+            <div class="menu-item">
+              <div class="menu-details">
+                <div class="menu-title">
+                  <span class="menu-button">SAI'S SPECIALTY NAANZA</span><br> <span>$18.99</span>
+                </div>
+                <div class="menu-desc">
+                  Our first, our best, our original — this bold creation mixes crispy gobi, tangy green chutney, and sweet caramelized onions for a flavor-packed slice that started it all.
+                </div>
+              </div>
+            </div>
+          
+            <div class="menu-item">
+              <div class="menu-details">
+                <div class="menu-title">
+                  <span class="menu-button">VERDINAANZA</span> <br><span>$18.99</span>
+                </div>
+                <div class="menu-desc">
+                  Green sauce, bell peppers, jalapeños, and fresh green veggies — bold, spicy, and full of flavor.
+                </div>
+              </div>
+            </div>
+          
+            <div class="menu-item">
+              <div class="menu-details">
+                <div class="menu-title">
+                  <span class="menu-button">BOMBAY HEAT</span> <br><span>$18.99</span>
+                </div>
+                <div class="menu-desc">
+                  Gobi (fried cauliflower), jalapeños, bell pepper, red chilli chutney sauce — spicy, crispy, and bold, bringing the street food energy.
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+          <script>
+            const leftImage = document.querySelector('.left-image');
+    
+            let hoverPreview = document.querySelector('.hover-preview');
+            if (!hoverPreview) {
+              hoverPreview = document.createElement('div');
+              hoverPreview.className = 'hover-preview';
+              leftImage.appendChild(hoverPreview);
+            }
+    
+            let currentImage = ''; // Track current image
+            let selectedItem = null; // Track selected menu item
+    
+            function getImageUrl(pizzaName) {
+              if (pizzaName.includes("SAI'S")) return 'Sai.png';
+              else if (pizzaName.includes("VERDINAANZA")) return 'Verdinaanza(Menu Item) (1).png';
+              else if (pizzaName.includes("BOMBAY HEAT")) return '_Bombay Heat (1).png';
+              return '';
+            }
+    
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => {
+              const pizzaName = item.querySelector('.menu-title .menu-button').textContent.trim();
+              const imageUrl = getImageUrl(pizzaName);
+    
+              item.addEventListener('mouseenter', () => {
+                if (selectedItem) return; // Hover disabled if something is selected
+                hoverPreview.style.opacity = 0;
+                setTimeout(() => {
+                  hoverPreview.style.backgroundImage = `url('${imageUrl}')`;
+                  hoverPreview.style.opacity = 1;
+                }, 200);
+              });
+    
+              item.addEventListener('mouseleave', () => {
+                if (selectedItem) return; // Don't fade out if something is selected
+                hoverPreview.style.opacity = 0;
+              });
+    
+              item.addEventListener('click', () => {
+                // If clicking the already selected item, unselect it
+                if (selectedItem === item) {
+                  item.classList.remove('selected');
+                  selectedItem = null;
+                  hoverPreview.style.opacity = 0; // Hide overlay
+                  return;
+                }
+    
+                // Clear previous selection
+                if (selectedItem) selectedItem.classList.remove('selected');
+    
+                // Set new selection
+                selectedItem = item;
+                item.classList.add('selected');
+    
+                // Lock in the image
+                hoverPreview.style.backgroundImage = `url('${imageUrl}')`;
+                hoverPreview.style.opacity = 1;
+              });
+            });
+            </script>
+            <script>
+              function goToPage(url) {
+                document.body.classList.add('slide-out');
+                setTimeout(() => {
+                  window.location.href = url;
+                }, 400); // matches animation duration
+              }
+              document.addEventListener("DOMContentLoaded", () => {
+        const buttons = document.querySelectorAll('.nav-btn');
+        const currentPage = location.pathname.split('/').pop(); // Get current page name (like 'menu.html', 'drinks.html', etc.)
+    
+        buttons.forEach(btn => {
+          const targetPage = btn.getAttribute('onclick').match(/'([^']+)'/)[1]; // Extract page from onclick
+    
+          if (targetPage === currentPage) {
+            // Disable and gray out the current page's button
+            btn.disabled = true;
+            btn.classList.add('active-nav');
+          } else {
+            // Enable the other buttons to navigate
+            btn.addEventListener('click', () => {
+              goToPage(targetPage); // Go to the corresponding page
+            });
+          }
+        });
+      });
+    
+      function goToPage(url) {
+        document.body.classList.add('slide-out');
+        setTimeout(() => {
+          window.location.href = url;
+        }, 400); // Matches the animation duration
+      }
+              </script>
+
+</div>
+<div class="cartBtns">
+  <button id="viewCartBtn" class="view-cart-btn">View Cart</button>
+  <button id="addSelectedToCartBtn" class="add-selected-btn">Add Selected to Cart</button>
+</div>  
+    <footer class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5" data-aos="zoom-in-up" data-aos-duration="400" style="background: rgba(255,255,255,0);border-color: rgba(255,255,255,0);opacity: 1;color: rgba(255,255,255,0);">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="link-light" data-aos="zoom-in-up" data-aos-duration="400" href="#">Technosphere 2025</a></li>
+                <li class="list-inline-item me-4"><a class="link-light" data-aos="zoom-in-up" data-aos-duration="400" href="#">804 618 3142</a></li>
+                <li class="list-inline-item"><a class="link-light" data-aos="zoom-in-up" data-aos-duration="400" href="#">naanza132@gmail.com</a></li>
+            </ul>
+            <ul class="list-inline" style="color: rgba(255,255,255,0);">
+                <li class="list-inline-item me-4"></li>
+                <li class="list-inline-item me-4"><a href="https://x.com/Naanza321136  "><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter text-light" data-aos="zoom-in-up" data-aos-duration="400">
+                            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15"></path>
+                        </svg></a></li>
+                <li class="list-inline-item"><a href="https://www.instagram.com/naanzas_technosphere2025/"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram text-light" data-aos="zoom-in-up" data-aos-duration="400">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                        </svg></a></li>
+            </ul>
+            <p class="text-muted mb-0">Copyright © 2025 Brand</p>
+        </div>
+    </footer>
+
+    <div class="cartBox" id="cartBox">
+        <h2>Cart</h2>
+        <ul id="cart"></ul>
+        <script>
+            function animateButton(btn) {
+                btn.classList.add("clicked");
+                btn.innerHTML = "";
+
+                setTimeout(() => {
+                btn.classList.remove("clicked");
+                btn.innerHTML = "Checkout";
+            }, 1500);
+            }
+        </script>
+<div class="cart-actions">
+  <button class="checkout-btn" onclick="animateButton(this)">Checkout</button>
+  <button class="clearCartBtn">Clear Cart</button>
+</div>
+    </div>
+    <script>
+      function animateButton(btn) {
+    btn.classList.add("clicked");
+    btn.innerHTML = "";
+
+    setTimeout(() => {
+        btn.classList.remove("clicked");
+        btn.innerHTML = "Checkout";
+
+        // 🛒 ALSO clear cart AFTER animation
+        localStorage.removeItem("cart");
+        document.dispatchEvent(new CustomEvent("cartUpdated"));
+    }, 1500);
+}
+        document.getElementById("viewCartBtn").addEventListener("click", function () {
+            document.getElementById("cartBox").classList.toggle("active");
+        });
+        document.getElementById("addSelectedToCartBtn").addEventListener("click", () => {
+    const selectedItems = document.querySelectorAll(".menu-item.selected");
+
+    if (selectedItems.length === 0) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'No item selected',
+            text: 'Please select an item first!',
+            confirmButtonColor: '#f0c674'
+        });
+        return;
+    }
+
+    selectedItems.forEach(item => {
+        const title = item.querySelector(".menu-button").innerText.trim();
+        const priceSpan = item.querySelector(".menu-title span:last-child");
+
+        if (priceSpan) {
+            const priceText = priceSpan.innerText.trim().replace('$', '');
+            const price = parseFloat(priceText);
+
+            if (!isNaN(price)) {
+                Swal.fire({
+                    title: `How many "${title}"?`,
+                    input: 'number',
+                    inputAttributes: {
+                        min: 1,
+                        step: 1
+                    },
+                    inputValue: 1,
+                    confirmButtonText: 'Add to Cart',
+                    confirmButtonColor: '#f0c674',
+                    background: '#2d2d2d',
+                    color: 'white'
+                }).then(result => {
+                    if (result.isConfirmed) {
+                        const quantity = parseInt(result.value);
+                        if (!isNaN(quantity) && quantity > 0) {
+                            for (let i = 0; i < quantity; i++) {
+                                addToCart(title, price);
+                            }
+                            document.dispatchEvent(new CustomEvent("cartUpdated"));
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Invalid quantity',
+                                text: 'Please enter a number greater than 0',
+                                confirmButtonColor: '#f0c674'
+                            });
+                        }
+                    }
+                });
+            }
+        }
+        item.classList.remove("selected");
+    });
+});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="menu.js"></script>
+</body>
+
+</html>

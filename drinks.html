@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="menu.css">
+  <script src="menu.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const currentPage = location.pathname.split('/').pop(); // Get the current page (like 'menu.html')
+      const naanzaBtn = document.getElementById('naanzaBtn');
+      const drinksBtn = document.getElementById('drinksBtn');
+      const dessertsBtn = document.getElementById('dessertsBtn');
+      const specialtyNaanzaBtn = document.getElementById('specialtyNaanzaBtn');  // Button for "Sai's Specialty Naanza"
+      const hoverPreview = document.querySelector('.hover-preview');  // This will show the image preview when hovering over items
+
+      let selectedItem = null; // Track which item is selected
+
+      // Function to disable the current page's button
+      function setButtonState() {
+        if (currentPage === 'menu.html') {
+          naanzaBtn.classList.add('active-nav');
+          naanzaBtn.setAttribute('disabled', 'true');
+          specialtyNaanzaBtn.classList.add('active-nav');
+          specialtyNaanzaBtn.setAttribute('disabled', 'true');  // Disable Sai's Specialty Naanza button on menu.html
+        } else if (currentPage === 'drinks.html') {
+          drinksBtn.classList.add('active-nav');
+          drinksBtn.setAttribute('disabled', 'true');
+        } else if (currentPage === 'desserts.html') {
+          dessertsBtn.classList.add('active-nav');
+          dessertsBtn.setAttribute('disabled', 'true');
+        }
+      }
+
+      setButtonState();
+
+      // Function to get the image URL based on the item name
+      function getImageUrl(itemName) {
+        const imageUrls = {
+          'SAI\'S SPECIALTY NAANZA': 'url-to-sais-specialty-naanza-image.jpg',
+          'Dessert 1': 'url-to-dessert-1-image.jpg',
+          'Dessert 2': 'url-to-dessert-2-image.jpg',
+          'Drink 1': 'url-to-drink-1-image.jpg',
+          'Drink 2': 'url-to-drink-2-image.jpg',
+          // Add more items and their image URLs as necessary
+        };
+        return imageUrls[itemName] || ''; // Default to empty string if not found
+      }
+
+      // Hover preview functionality for menu items
+      const menuItems = document.querySelectorAll('.menu-item');
+      menuItems.forEach(item => {
+        const pizzaName = item.querySelector('.menu-title .menu-button').textContent.trim();
+        const imageUrl = getImageUrl(pizzaName);
+
+        item.addEventListener('mouseenter', () => {
+          if (selectedItem) {
+            hoverPreview.style.opacity = 0; // Hide preview when an item is selected
+            return;
+          }
+          hoverPreview.style.opacity = 0;
+          setTimeout(() => {
+            hoverPreview.style.backgroundImage = `url('${imageUrl}')`;
+            hoverPreview.style.opacity = 1;
+          }, 200);
+        });
+
+        item.addEventListener('mouseleave', () => {
+          if (selectedItem) {
+            hoverPreview.style.backgroundImage = `url('${getImageUrl(selectedItem)}')`; // Show the selected item's image
+            hoverPreview.style.opacity = 1;
+            return;
+          }
+          hoverPreview.style.opacity = 0; // Hide the preview when hovering off an unselected item
+        });
+
+        item.addEventListener('click', () => {
+          if (selectedItem === item) {
+            item.classList.remove('selected');
+            selectedItem = null;
+            hoverPreview.style.opacity = 0; // Hide preview when nothing is selected
+          } else {
+            if (selectedItem) selectedItem.classList.remove('selected');
+            selectedItem = item;
+            item.classList.add('selected');
+            hoverPreview.style.backgroundImage = `url('${imageUrl}')`; // Lock in the image when selected
+            hoverPreview.style.opacity = 1;
+          }
+        });
+      });
+
+      // Function to toggle the selection state of buttons (including the Sai's Specialty Naanza button)
+      function toggleButtonState(btn, pageName) {
+        if (btn.classList.contains('active-nav')) {
+          btn.classList.remove('active-nav');
+          btn.removeAttribute('disabled');
+          window.location.href = pageName;
+        }
+      }
+
+      // Event listener to re-enable button on click
+      naanzaBtn.addEventListener('click', () => toggleButtonState(naanzaBtn, 'menu.html'));
+      drinksBtn.addEventListener('click', () => toggleButtonState(drinksBtn, 'drinks.html'));
+      dessertsBtn.addEventListener('click', () => toggleButtonState(dessertsBtn, 'desserts.html'));
+      specialtyNaanzaBtn.addEventListener('click', () => toggleButtonState(specialtyNaanzaBtn, 'menu.html'));  // For Sai's Specialty Naanza button
+    });
+
+    function goToPage(url) {
+      document.body.classList.add('slide-out');
+      setTimeout(() => {
+        window.location.href = url;
+      }, 400); // Matches the animation duration
+    }
+  </script>
+</head>
+
+<body>
+  <div class="left-image"></div>
+  <div class="right-menu">
+    <h1>DRINKS</h1>
+    <div class="menu-container">
+      <div class="nav-buttons">
+        <button class="nav-btn" id="naanzaBtn" onclick="goToPage('menu.html')">Naanza</button>
+        <button class="nav-btn" id="drinksBtn" onclick="goToPage('drinks.html')">Drinks</button>
+        <button class="nav-btn" id="dessertsBtn" onclick="goToPage('desserts.html')">Desserts</button>
+      </div>
+
+      <!-- Menu Items: Add more items here as needed for Drinks and Desserts -->
+      <div class="menu-item">
+        <div class="menu-details">
+          <div class="menu-title">
+            <span class="menu-button" id="specialtyNaanzaBtn">MANGO LASSI</span><span>$4.99</span>
+          </div>
+          <div class="menu-desc">
+            Our first, our best, our original — this bold creation mixes crispy gobi, tangy green chutney, and sweet caramelized onions for a flavor-packed slice that started it all.
+          </div>
+        </div>
+      </div>
+
+      <!-- Example Drink Item (Can Be Copied and Reused) -->
+      <div class="menu-item">
+        <div class="menu-details">
+          <div class="menu-title">
+            <span class="menu-button">CHINOTTO</span><span>$4.99</span>
+          </div>
+          <div class="menu-desc">
+            A refreshing drink perfect for any meal. Crisp and cool, with just the right balance of flavor.
+          </div>
+        </div>
+      </div>
+
+      <!-- Example Dessert Item (Can Be Copied and Reused) -->
+      <div class="menu-item">
+        <div class="menu-details">
+          <div class="menu-title">
+            <span class="menu-button">THANDAI</span><span>$6.99</span>
+          </div>
+          <div class="menu-desc">
+            A sweet and decadent treat to end your meal. Rich, creamy, and topped with a hint of chocolate drizzle.
+          </div>
+        </div>
+      </div>
+    
+      <!-- Example Dessert Item (Can Be Copied and Reused) -->
+      <div class="menu-item">
+        <div class="menu-details">
+          <div class="menu-title">
+            <span class="menu-button">CRODINO</span><span>$6.99</span>
+          </div>
+          <div class="menu-desc">
+            A sweet and decadent treat to end your meal. Rich, creamy, and topped with a hint of chocolate drizzle.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
