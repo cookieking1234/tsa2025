@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Caliste';
+	src: url(../../assets/fonts/Caliste-899bc6b507b341066bf77080fa5ea2e3.woff2) format('woff2'),
+	url(../../assets/fonts/Caliste-9e046429a4e992435e4baaf42fb30c87.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

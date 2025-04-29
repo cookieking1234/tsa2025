@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'Copeland';
+	src: url(../../assets/fonts/Copeland-3b208bc5e7cccc06b43918c66c2a1295.woff2) format('woff2'),
+	url(../../assets/fonts/Copeland-55e5a043a2c9c92765e7f04ac0eb2317.woff) format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
