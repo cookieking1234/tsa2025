@@ -42,64 +42,49 @@
 
 
     <div class="pizza-builder">
-        <div class="pizza-stage">
-            <img src="Plain Cheese Pizza - Base (Level 1).png" class="base" id="pizza">
-            <img src="bell peper overlay (1).png" class="topping" id="topping-bell">
-            <img src="Cilantro Layer Overlay.png" class="topping" id="topping-cilantro">
-            <img src="Caramelized Onions Layer Overlay.png" class="topping" id="topping-onions">
-            <img src="Green Chutney Sauce Layer Overlay.png" class="topping" id="topping-chutney">
-            <img src="Gobi Layer Overlay.png" class="topping" id="topping-gobi">
-            <img src="Jalapeno Layer Overlay.png" class="topping" id="topping-jalapeno">
-            <img src="okra layer for naanza.png" class="topping" id="topping-okra">
-            <img src="seasoned panner layer.png" class="topping" id="topping-paneer">
-        </div>        
-            <div class="btn-holder">
-                <div class="sizebox">
-                    <div class="collumn1">
-                        <button class="layer" id="btn-topping1" data-topping="bell">
-                            <img src="bell peper overlay (1).png" class="topping-mini">
-                            Bell Pepper
-                        </button>
-                        
-                        <button class="layer" id="btn-topping2" data-topping="cilantro">
-                            <img src="Cilantro Layer Overlay.png" class="topping-mini">
-                            Cilantro
-                        </button>
-                        
-                        <button class="layer" id="btn-topping3" data-topping="onions">
-                            <img src="Caramelized Onions Layer Overlay.png" class="topping-mini">
-                            Onions
-                        </button>
-                        
-                        <button class="layer" id="btn-topping4" data-topping="chutney">
-                            <img src="Green Chutney Sauce Layer Overlay.png" class="topping-mini">
-                            Green Chutney
-                        </button>
-                    </div>
-                    
-                    <div class="collumn2">
-                        <button class="layer" id="btn-topping5" data-topping="gobi">
-                            <img src="Gobi Layer Overlay.png" class="topping-mini">
-                            Gobi Manchurian
-                        </button>
-                        
-                        <button class="layer" id="btn-topping6" data-topping="jalapeno">
-                            <img src="Jalapeno Layer Overlay.png" class="topping-mini">
-                            Jalapeno
-                        </button>
-                        
-                        <button class="layer" id="btn-topping7" data-topping="okra">
-                            <img src="okra layer for naanza.png" class="topping-mini">
-                            Okra
-                        </button>
-                                        
-                        <button class="layer" id="btn-topping8" data-topping="paneer">
-                            <img src="seasoned panner layer.png" class="topping-mini">
-                            Paneer Masala
-                        </button>
-                    </div>
-                </div>
+        <img src="Plain Cheese Pizza - Base (Level 1).png" class="base" id="pizza">
 
+            <div class="btn-holder">
+                <button class="layer" id="btn-topping1" data-topping="Bell Pepper" onclick="toggleTopping(event)">
+                    <img src="bell peper overlay (1).png" class="topping-mini">
+                    <img src="bell peper overlay (1).png" class="topping" id="topping">
+                    Bell Pepper
+                </button>
+                <button class="layer" id="btn-topping2" data-topping="Cilantro" onclick="toggleTopping(event)">
+                    <img src="Cilantro Layer Overlay.png" class="topping-mini" >
+                    <img src="Cilantro Layer Overlay.png" class="topping" id="topping">
+                    Cilantro
+                </button>
+                <button class="layer" id="btn-topping3" data-topping="Onions" onclick="toggleTopping(event)">
+                    <img src="Caramelized Onions Layer Overlay.png" class="topping-mini" >
+                    <img src="Caramelized Onions Layer Overlay.png" class="topping" id="topping">
+                    Onions
+                </button>
+                <button class="layer" id="btn-topping4" data-topping="Mint Chutney" onclick="toggleTopping(event)">
+                    <img src="Green Chutney Sauce Layer Overlay.png" class="topping-mini" >
+                    <img src="Green Chutney Sauce Layer Overlay.png" class="topping" id="topping">
+                    Green Chutney
+                </button>
+                <button class="layer" id="btn-topping5" data-topping="Gobi Manchurian" onclick="toggleTopping(event)">
+                    <img src="Gobi Layer Overlay.png" class="topping-mini" >
+                    <img src="Gobi Layer Overlay.png" class="topping" id="topping">
+                    Gobi Manchurian
+                </button>
+                <button class="layer" id="btn-topping6" data-topping="Jalapeno" onclick="toggleTopping(event)">
+                    <img src="Jalapeno Layer Overlay.png" class="topping-mini" >
+                    <img src="Jalapeno Layer Overlay.png" class="topping" id="topping">
+                    Jalapeno
+                </button>
+                <button class="layer" id="btn-topping7" data-topping="Okra" onclick="toggleTopping(event)">
+                    <img src="okra layer for naanza.png" class="topping-mini" >
+                    <img src="okra layer for naanza.png" class="topping" id="topping">
+                    Okra
+                </button>
+                <button class="layer" id="btn-topping8" data-topping="Paneer Masala" onclick="toggleTopping(event)">
+                    <img src="seasoned panner layer.png" class="topping-mini" >
+                    <img src="seasoned panner layer.png" class="topping" id="topping">
+                    Paneer Masala
+                </button>
             </div>
             
             <div class="cartBtns">
