@@ -184,6 +184,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.getElementById("viewCartBtn").addEventListener("click", function () {
-    document.getElementById("cartBox").classList.add("visible");
+document.querySelectorAll(".viewCartBtn").forEach(function (button) {
+    button.addEventListener("click", function () {
+        document.getElementById("cartBox").classList.add("visible");
+    });
+});
+
+document.querySelectorAll(".viewCartBtn2").forEach(function (button) {
+    button.addEventListener("click", function () {
+        document.getElementById("cartBox").classList.add("visible");
+    });
 });
