@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Build Your Own</title>
+    <title>Untitled</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Caliste.css">
     <link rel="stylesheet" href="assets/css/Copeland.css">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/Hero-Carousel-images.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-Dark-icons.css">
     <link rel="stylesheet" href="pizza.css">
+    <title>Build Your Own</title>
 
 </head>
 
@@ -43,60 +44,53 @@
     <div class="pizza-builder">
         <img src="Plain Cheese Pizza - Base (Level 1).png" class="base" id="pizza">
 
-            <div class="wrapep">
-                <div class="btn-holder">
-                    <button class="layer" id="btn-topping1" data-topping="Bell Pepper" onclick="toggleTopping(event)">
-                        <img src="bell peper overlay (1).png" class="topping-mini">
-                        <img src="bell peper overlay (1).png" class="topping" id="topping">
-                        Bell Pepper
-                    </button>
-                    <button class="layer" id="btn-topping2" data-topping="Cilantro" onclick="toggleTopping(event)">
-                        <img src="Cilantro Layer Overlay.png" class="topping-mini" >
-                        <img src="Cilantro Layer Overlay.png" class="topping" id="topping">
-                        Cilantro
-                    </button>
-                    <button class="layer" id="btn-topping3" data-topping="Onions" onclick="toggleTopping(event)">
-                        <img src="Caramelized Onions Layer Overlay.png" class="topping-mini" >
-                        <img src="Caramelized Onions Layer Overlay.png" class="topping" id="topping">
-                        Onions
-                    </button>
-                    <button class="layer" id="btn-topping4" data-topping="Mint Chutney" onclick="toggleTopping(event)">
-                        <img src="Green Chutney Sauce Layer Overlay.png" class="topping-mini" >
-                        <img src="Green Chutney Sauce Layer Overlay.png" class="topping" id="topping">
-                        Green Chutney
-                    </button>
-                    <button class="layer" id="btn-topping5" data-topping="Gobi Manchurian" onclick="toggleTopping(event)">
-                        <img src="Gobi Layer Overlay.png" class="topping-mini" >
-                        <img src="Gobi Layer Overlay.png" class="topping" id="topping">
-                        Gobi Manchurian
-                    </button>
-                    <button class="layer" id="btn-topping6" data-topping="Jalapeno" onclick="toggleTopping(event)">
-                        <img src="Jalapeno Layer Overlay.png" class="topping-mini" >
-                        <img src="Jalapeno Layer Overlay.png" class="topping" id="topping">
-                        Jalapeno
-                    </button>
-                    <button class="layer" id="btn-topping7" data-topping="Okra" onclick="toggleTopping(event)">
-                        <img src="okra layer for naanza.png" class="topping-mini" >
-                        <img src="okra layer for naanza.png" class="topping" id="topping">
-                        Okra
-                    </button>
-                    <button class="layer" id="btn-topping8" data-topping="Paneer Masala" onclick="toggleTopping(event)">
-                        <img src="seasoned panner layer.png" class="topping-mini" >
-                        <img src="seasoned panner layer.png" class="topping" id="topping">
-                        Paneer Masala
-                    </button>
-                </div>
-                <div class="cartBtns">
-                    <button id="viewCartBtn">View Cart</button>
-                    <button class="addtocart" onclick="addToCartCustom('Custom Pizza', 19.99, selectedToppings)">Add to Cart</button>
-                </div>
+            <div class="btn-holder">
+                <button class="layer" id="btn-topping1" data-topping="Bell Pepper" onclick="toggleTopping(event)">
+                    <img src="bell peper overlay (1).png" class="topping-mini">
+                    <img src="bell peper overlay (1).png" class="topping" id="topping">
+                    Bell Pepper
+                </button>
+                <button class="layer" id="btn-topping2" data-topping="Cilantro" onclick="toggleTopping(event)">
+                    <img src="Cilantro Layer Overlay.png" class="topping-mini" >
+                    <img src="Cilantro Layer Overlay.png" class="topping" id="topping">
+                    Cilantro
+                </button>
+                <button class="layer" id="btn-topping3" data-topping="Onions" onclick="toggleTopping(event)">
+                    <img src="Caramelized Onions Layer Overlay.png" class="topping-mini" >
+                    <img src="Caramelized Onions Layer Overlay.png" class="topping" id="topping">
+                    Onions
+                </button>
+                <button class="layer" id="btn-topping4" data-topping="Mint Chutney" onclick="toggleTopping(event)">
+                    <img src="Green Chutney Sauce Layer Overlay.png" class="topping-mini" >
+                    <img src="Green Chutney Sauce Layer Overlay.png" class="topping" id="topping">
+                    Green Chutney
+                </button>
+                <button class="layer" id="btn-topping5" data-topping="Gobi Manchurian" onclick="toggleTopping(event)">
+                    <img src="Gobi Layer Overlay.png" class="topping-mini" >
+                    <img src="Gobi Layer Overlay.png" class="topping" id="topping">
+                    Gobi Manchurian
+                </button>
+                <button class="layer" id="btn-topping6" data-topping="Jalapeno" onclick="toggleTopping(event)">
+                    <img src="Jalapeno Layer Overlay.png" class="topping-mini" >
+                    <img src="Jalapeno Layer Overlay.png" class="topping" id="topping">
+                    Jalapeno
+                </button>
+                <button class="layer" id="btn-topping7" data-topping="Okra" onclick="toggleTopping(event)">
+                    <img src="okra layer for naanza.png" class="topping-mini" >
+                    <img src="okra layer for naanza.png" class="topping" id="topping">
+                    Okra
+                </button>
+                <button class="layer" id="btn-topping8" data-topping="Paneer Masala" onclick="toggleTopping(event)">
+                    <img src="seasoned panner layer.png" class="topping-mini" >
+                    <img src="seasoned panner layer.png" class="topping" id="topping">
+                    Paneer Masala
+                </button>
             </div>
-
-            <style>
-                .wrapep {
-                    position: relative;
-                }
-            </style>
+            
+            <div class="cartBtns">
+                <button id="viewCartBtn">View Cart</button>
+                <button class="addtocart" onclick="addToCartCustom('Custom Pizza', 19.99, selectedToppings)">Add to Cart</button>
+            </div>
     </div>
     
     <div class="cartBox" id="cartBox">
