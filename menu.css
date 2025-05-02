@@ -6,10 +6,6 @@ body {
   min-height: 100vh;
 }
 
-.saharsh {
-  display: flex;
-}
-
 .left-image {
   flex: 1;
   position: relative;
@@ -21,9 +17,8 @@ body {
 }
 
 .right-menu {
-  flex: 1.5;
-  padding: 2rem;
-  overflow-y: auto;
+  flex: 2;
+  padding: 30px;
 }
 
 .NAANZA {
@@ -108,15 +103,17 @@ h1 {
 }  
 
 .hover-preview {
-position: absolute;
-inset: 0;
-background-size: cover; /* ✅ */
-min-height: 500px; /* ✅ Ensures it looks good even when screen resizes */
-background-position: center;
-opacity: 0;
-transition: opacity 0.3s ease; /* keep this */
-z-index: 10;
-pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .menu-item.selected {
@@ -380,7 +377,7 @@ pointer-events: none;
 }
 
 .view-cart-btn, .add-selected-btn {
-  flex: 0.1 0.1 30%;
+  flex: 1 1 45%;
   background-color: #f1bb4d;
   color: white;
   font-size: 18px;
@@ -397,6 +394,15 @@ pointer-events: none;
   transform: scale(1.02);
 }
 
+@media (max-width: 600px) {
+  .cartBtns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .view-cart-btn, .add-selected-btn {
+    width: 80%;
+  }
+}
 
 .cart-actions {
   display: flex;
@@ -424,4 +430,25 @@ pointer-events: none;
 
 .menu-desc {
   color: #eee;
+}
+
+.saharsh {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto;
+  position: relative;
+}
+
+.left-image {
+  flex: 1;
+  min-height: 600px;
+  max-height: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  overflow: hidden;
+  vertical-align: center;
 }
